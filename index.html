@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Traveling Sky | Agencia de Viajes</title>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Logo de Traveling Sky">
+
+        <h1>✈️ Traveling Sky</h1>
+
+        <p>Donde tus sueños toman vuelo</p>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#destinos">Destinos</a>
+            <a href="#reserva">Solicita tu viaje</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INICIO -->
+        <section id="inicio" class="hero">
+
+            <div class="hero-contenido">
+
+                <p class="etiqueta">TU PRÓXIMA AVENTURA COMIENZA AQUÍ</p>
+
+                <h2>Viaja, descubre y disfruta</h2>
+
+                <p>
+                    En Traveling Sky hacemos realidad tus sueños de viajar.
+                    Encuentra vuelos, hospedaje y paquetes turísticos
+                    pensados para vivir experiencias inolvidables.
+                </p>
+
+                <button onclick="document.getElementById('servicios').scrollIntoView({behavior:'smooth'})">
+                    Explorar servicios
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICIOS -->
+        <section id="servicios">
+
+            <p class="subtitulo">LO QUE OFRECEMOS</p>
+
+            <h2>Nuestros servicios</h2>
+
+            <p class="descripcion-seccion">
+                Encuentra todo lo que necesitas para organizar tu próximo viaje.
+            </p>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+
+                    <div class="icono">✈️</div>
+
+                    <h3>Reserva de vuelos</h3>
+
+                    <p>
+                        Encuentra opciones de vuelos nacionales e internacionales
+                        para llegar a tu destino.
+                    </p>
+
+                    <button onclick="mostrarServicio('vuelos')">
+                        Más información
+                    </button>
+
+                </article>
+
+
+                <article class="tarjeta">
+
+                    <div class="icono">🏨</div>
+
+                    <h3>Hospedaje</h3>
+
+                    <p>
+                        Encuentra alojamientos cómodos para disfrutar
+                        de tu viaje con tranquilidad.
+                    </p>
+
+                    <button onclick="mostrarServicio('hospedaje')">
+                        Más información
+                    </button>
+
+                </article>
+
+
+                <article class="tarjeta">
+
+                    <div class="icono">🌎</div>
+
+                    <h3>Paquetes turísticos</h3>
+
+                    <p>
+                        Descubre paquetes nacionales e internacionales
+                        diseñados para diferentes experiencias.
+                    </p>
+
+                    <button onclick="mostrarServicio('paquetes')">
+                        Más información
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- DESTINOS -->
+        <section id="destinos">
+
+            <p class="subtitulo">INSPÍRATE PARA VIAJAR</p>
+
+            <h2>Destinos destacados</h2>
+
+            <p class="descripcion-seccion">
+                Algunos lugares que puedes descubrir con Traveling Sky.
+            </p>
+
+            <div class="destinos-grid">
+
+                <article class="destino">
+                    <div class="destino-icono">🏝️</div>
+                    <h3>San Andrés</h3>
+                    <p>
+                        Playas, mar de siete colores y momentos
+                        inolvidables en el Caribe colombiano.
+                    </p>
+                    <button onclick="seleccionarDestino('San Andrés')">
+                        Me interesa
+                    </button>
+                </article>
+
+
+                <article class="destino">
+                    <div class="destino-icono">🗼</div>
+                    <h3>París</h3>
+                    <p>
+                        Cultura, gastronomía, historia y lugares
+                        emblemáticos para conocer.
+                    </p>
+                    <button onclick="seleccionarDestino('París')">
+                        Me interesa
+                    </button>
+                </article>
+
+
+                <article class="destino">
+                    <div class="destino-icono">🏖️</div>
+                    <h3>Cartagena</h3>
+                    <p>
+                        Historia, arquitectura, playas y la magia
+                        del Caribe colombiano.
+                    </p>
+                    <button onclick="seleccionarDestino('Cartagena')">
+                        Me interesa
+                    </button>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE NOSOTROS -->
+        <section id="nosotros">
+
+            <p class="subtitulo">CONÓCENOS</p>
+
+            <h2>Sobre Traveling Sky</h2>
+
+            <p class="texto-nosotros">
+                Somos una agencia de viajes enfocada en brindar experiencias
+                turísticas y ayudar a nuestros clientes a encontrar el viaje ideal.
+            </p>
+
+            <div class="beneficios">
+
+                <div>
+                    <span>✈️</span>
+                    <h3>Experiencias</h3>
+                    <p>Opciones pensadas para diferentes tipos de viajeros.</p>
+                </div>
+
+                <div>
+                    <span>🌎</span>
+                    <h3>Destinos</h3>
+                    <p>Alternativas nacionales e internacionales.</p>
+                </div>
+
+                <div>
+                    <span>💬</span>
+                    <h3>Asesoría</h3>
+                    <p>Te ayudamos a encontrar una opción para tu viaje.</p>
+                </div>
+
+            </div>
+
+        </section>
+<!-- SOLICITUD DE VIAJE -->
+
+<section id="reserva">
+
+<p class="subtitulo">PLANEA TU VIAJE</p>
+
+<h2>Solicita tu viaje</h2>
+
+<p class="descripcion-seccion"
+    Cuéntanos qué viaje tienes en mente y te ayudaremos a encontrar
+    una opción de acuerdo con tus necesidades.
+</p>
+
+<form id="formulario-reserva">
+
+    <label for="destino-reserva">Destino</label>
+    <select id="destino-reserva" required>
+        <option value="">Selecciona un destino</option>
+        <option value="San Andrés">San Andrés</option>
+        <option value="Cartagena">Cartagena</option>
+        <option value="París">París</option>
+        <option value="Otro destino">Otro destino</option>
+    </select>
+
+    <label for="servicio-reserva">Tipo de servicio</label>
+    <select id="servicio-reserva" required>
+        <option value="">Selecciona un servicio</option>
+        <option value="Vuelo">Reserva de vuelo</option>
+        <option value="Hospedaje">Hospedaje</option>
+        <option value="Paquete turístico">Paquete turístico</option>
+    </select>
+
+    <label for="fecha-reserva">Fecha del viaje</label>
+    <input type="date" id="fecha-reserva" required>
+
+    <label for="viajeros">Número de viajeros</label>
+    <input
+        type="number"
+        id="viajeros"
+        min="1"
+        max="20"
+        placeholder="Ejemplo: 2"
+        required
+    >
+
+    <label for="correo-reserva">Correo electrónico</label>
+    <input
+        type="email"
+        id="correo-reserva"
+        placeholder="ejemplo@correo.com"
+        required
+    >
+
+    <button type="submit">Solicitar información</button>
+
+</form>
+</section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+
+            <p class="subtitulo">ESTAMOS PARA AYUDARTE</p>
+
+            <h2>Contáctanos</h2>
+
+            <p class="descripcion-seccion">
+                ¿Tienes alguna pregunta? Déjanos tus datos y cuéntanos
+                qué viaje tienes en mente.
+            </p>
+
+            <form>
+
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Escribe tu nombre"
+                >
+
+                <label for="correo">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="ejemplo@correo.com"
+                >
+
+                <label for="mensaje">Mensaje</label>
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    placeholder="Cuéntanos qué necesitas..."
+                ></textarea>
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <h3>✈️ Traveling Sky</h3>
+
+        <p>Donde tus sueños toman vuelo</p>
+
+        <p>© 2026 Traveling Sky. Todos los derechos reservados.</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
