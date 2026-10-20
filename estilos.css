@@ -146,7 +146,7 @@ background-image:
         rgba(4, 30, 75, 0.45),
         rgba(4, 30, 75, 0.60)
     ),
-    url("../img/viaje.jpg");
+    url("../viaje.jpg");
 
 background-size: cover;
 background-position: center;
