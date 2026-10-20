@@ -8,41 +8,26 @@ document.addEventListener("DOMContentLoaded", function () {
     // FORMULARIO DE CONTACTO
     // ==========================================
 
-    const formulario = document.querySelector("#contacto form");
+   const formulario = document.querySelector("#contacto form");
 
-    if (formulario) {
+if (formulario) {
+    formulario.addEventListener("submit", function (evento) {
+        const nombre = document.getElementById("nombre").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const mensaje = document.getElementById("mensaje").value.trim();
 
-        formulario.addEventListener("submit", function (evento) {
-
+        if (nombre === "" || correo === "" || mensaje === "") {
             evento.preventDefault();
+            alert("Por favor, completa todos los datos.");
+            return;
+        }
 
-            const nombre = document.getElementById("nombre").value.trim();
-            const correo = document.getElementById("correo").value.trim();
-            const mensaje = document.getElementById("mensaje").value.trim();
-
-            // Validar campos vacíos
-            if (nombre === "" || correo === "" || mensaje === "") {
-                alert("Por favor, completa todos los datos.");
-                return;
-            }
-
-            // Validar correo
-            if (!correo.includes("@")) {
-                alert("Por favor, ingresa un correo electrónico válido.");
-                return;
-            }
-
-            // Mensaje de confirmación
-            alert(
-                "¡Gracias, " + nombre + "!\n\n" +
-                "Hemos recibido tu mensaje correctamente.\n" +
-                "Traveling Sky se pondrá en contacto contigo."
-            );
-
-            // Limpiar formulario
-            formulario.reset();
-
-        });
+        if (!correo.includes("@")) {
+            evento.preventDefault();
+            alert("Por favor, ingresa un correo electrónico válido.");
+            return;
+        }
+    });
     }
 
 
