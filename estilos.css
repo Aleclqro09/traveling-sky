@@ -465,4 +465,19 @@ nav a {
 section {
     padding: 50px 20px;
 }
+    .boton-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+    background-color: #128C7E;
+}
 }
