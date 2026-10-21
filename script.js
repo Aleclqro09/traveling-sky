@@ -139,39 +139,17 @@ function seleccionarDestino(destino) {
 const formularioReserva = document.getElementById("formulario-reserva");
 
 if (formularioReserva) {
+    formularioReserva.addEventListener("submit", function (evento) {
+        const destino = document.getElementById("destino-reserva").value;
+        const servicio = document.getElementById("servicio-reserva").value;
+        const fecha = document.getElementById("fecha-reserva").value;
+        const viajeros = document.getElementById("viajeros").value;
+        const correo = document.getElementById("correo-reserva").value.trim();
 
-formularioReserva.addEventListener("submit", function (evento) {
-
-    evento.preventDefault();
-
-    const destino = document.getElementById("destino-reserva").value;
-    const servicio = document.getElementById("servicio-reserva").value;
-    const fecha = document.getElementById("fecha-reserva").value;
-    const viajeros = document.getElementById("viajeros").value;
-    const correo = document.getElementById("correo-reserva").value;
-
-    if (
-        destino === "" ||
-        servicio === "" ||
-        fecha === "" ||
-        viajeros === "" ||
-        correo === ""
-    ) {
-        alert("Por favor, completa todos los datos de la solicitud.");
-        return;
-    }
-
-    alert(
-        "✈️ ¡Solicitud recibida!\n\n" +
-        "Destino: " + destino + "\n" +
-        "Servicio: " + servicio + "\n" +
-        "Fecha: " + fecha + "\n" +
-        "Viajeros: " + viajeros + "\n\n" +
-        "Traveling Sky revisará tu solicitud y te contactará " +
-        "al correo registrado."
-    );
-
-    formularioReserva.reset();
-
-});
+        if (!destino || !servicio || !fecha || !viajeros || !correo) {
+            evento.preventDefault();
+            alert("Por favor, completa todos los datos de la solicitud.");
+        }
+    });
 }
+
