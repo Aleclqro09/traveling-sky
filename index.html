@@ -227,10 +227,18 @@
     una opción de acuerdo con tus necesidades.
 </p>
 
-<form id="formulario-reserva">
+<form id="formulario-reserva"
+      action="https://formsubmit.co/claroaleja@gmail.com"
+      method="POST">
+
+    <input type="hidden" name="_subject"
+           value="Nueva solicitud de viaje - Traveling Sky">
+
+    <input type="hidden" name="_next"
+           value="https://aleclqro09.github.io/traveling-sky/">
 
     <label for="destino-reserva">Destino</label>
-    <select id="destino-reserva" required>
+    <select id="destino-reserva" name="Destino" required>
         <option value="">Selecciona un destino</option>
         <option value="San Andrés">San Andrés</option>
         <option value="Cartagena">Cartagena</option>
@@ -239,7 +247,7 @@
     </select>
 
     <label for="servicio-reserva">Tipo de servicio</label>
-    <select id="servicio-reserva" required>
+    <select id="servicio-reserva" name="Tipo de servicio" required>
         <option value="">Selecciona un servicio</option>
         <option value="Vuelo">Reserva de vuelo</option>
         <option value="Hospedaje">Hospedaje</option>
@@ -247,25 +255,19 @@
     </select>
 
     <label for="fecha-reserva">Fecha del viaje</label>
-    <input type="date" id="fecha-reserva" required>
+    <input type="date" id="fecha-reserva"
+           name="Fecha del viaje" required>
 
     <label for="viajeros">Número de viajeros</label>
-    <input
-        type="number"
-        id="viajeros"
-        min="1"
-        max="20"
-        placeholder="Ejemplo: 2"
-        required
-    >
+    <input type="number" id="viajeros"
+           name="Número de viajeros"
+           min="1" max="20"
+           placeholder="Ejemplo: 2" required>
 
     <label for="correo-reserva">Correo electrónico</label>
-    <input
-        type="email"
-        id="correo-reserva"
-        placeholder="ejemplo@correo.com"
-        required
-    >
+    <input type="email" id="correo-reserva"
+           name="Correo del cliente"
+           placeholder="ejemplo@correo.com" required>
 
     <button type="submit">Solicitar información</button>
 
