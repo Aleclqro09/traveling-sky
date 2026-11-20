@@ -541,3 +541,11 @@ footer h3 {
     position: relative;
     z-index: 2;
 }
+.hero {
+    background-image:
+        linear-gradient(rgba(20, 43, 69, 0.35), rgba(20, 43, 69, 0.45)),
+        url("../viaje.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
