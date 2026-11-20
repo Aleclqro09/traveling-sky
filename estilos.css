@@ -523,4 +523,21 @@ footer h3 {
         font-size: 31px;
     }
 }
+.hero {
+    background:
+        linear-gradient(rgba(20, 43, 69, 0.45), rgba(20, 43, 69, 0.55)),
+        url("../viaje.jpg") center center / cover no-repeat;
+}
 
+.hero .etiqueta {
+    display: block;
+    color: #F2D9A0;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    z-index: 2;
+}
