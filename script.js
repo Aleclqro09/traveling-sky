@@ -70,40 +70,22 @@ if (formulario) {
 // ==========================================
 
 function mostrarServicio(servicio) {
+    const selector = document.getElementById("servicio-reserva");
+    const formulario = document.getElementById("reserva");
 
-    if (servicio === "vuelos") {
+    const opciones = {
+        vuelos: "Vuelo",
+        hospedaje: "Hospedaje",
+        paquetes: "Paquete turístico"
+    };
 
-        alert(
-            "✈️ RESERVA DE VUELOS\n\n" +
-            "Traveling Sky ofrece opciones de vuelos " +
-            "nacionales e internacionales.\n\n" +
-            "Puedes contactarnos para recibir información " +
-            "sobre tu próximo viaje."
-        );
-
+    if (selector) {
+        selector.value = opciones[servicio] || "";
     }
 
-    else if (servicio === "hospedaje") {
-
-        alert(
-            "🏨 HOSPEDAJE\n\n" +
-            "Te ayudamos a encontrar opciones de alojamiento " +
-            "para disfrutar tu viaje con comodidad."
-        );
-
+    if (formulario) {
+        formulario.scrollIntoView({ behavior: "smooth" });
     }
-
-    else if (servicio === "paquetes") {
-
-        alert(
-            "🌎 PAQUETES TURÍSTICOS\n\n" +
-            "Encuentra opciones de paquetes turísticos " +
-            "nacionales e internacionales.\n\n" +
-            "¡Cuéntanos qué destino quieres conocer!"
-        );
-
-    }
-
 }
 
 
