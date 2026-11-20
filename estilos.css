@@ -1,483 +1,521 @@
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-font-family: Arial, sans-serif;
-line-height: 1.6;
-background-color: #f4f8fb;
-color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    background-color: #F7F5F0;
+    color: #333333;
 }
 
 /* =========================
-ENCABEZADO
+   ENCABEZADO
 ========================= */
 
 header {
-background: linear-gradient(135deg, #062b68, #0b3d91);
-color: white;
-text-align: center;
-padding: 25px 20px 20px;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.20);
-position: relative;
-z-index: 10;
+    background: linear-gradient(135deg, #10263D, #1B3B58);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 10;
 }
 
 header img {
-    width: 260px;
+    width: 230px;
+    max-width: 80%;
     height: auto;
     display: block;
     margin: 0 auto 12px;
-    border-radius: 15px;
-    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.25));
+    border-radius: 12px;
 }
 
 header h1 {
-    display: block;
-    width: 100%;
-    text-align: center;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 58px;
-    color: #f5a623;
+    font-size: 48px;
+    color: #D6B77A;
+    letter-spacing: 2px;
     margin-bottom: 5px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.35);
 }
 
 header p {
-font-family: Georgia, "Times New Roman", serif;
-font-size: 21px;
-color: #ffffff;
-font-style: italic;
-letter-spacing: 2px;
-margin-bottom: 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    color: #F7F5F0;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
 }
 
 /* =========================
-MENÚ
+   MENÚ
 ========================= */
 
 nav {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 8px;
-flex-wrap: wrap;
-margin: 10px auto 0;
-padding: 8px;
-max-width: 950px;
-background: rgba(255, 255, 255, 0.10);
-border: 1px solid rgba(255, 255, 255, 0.18);
-border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 15px auto 0;
+    padding: 9px;
+    max-width: 1000px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 40px;
 }
 
 nav a {
-color: white;
-text-decoration: none;
-font-weight: bold;
-font-size: 16px;
-padding: 10px 16px;
-border-radius: 25px;
-transition: 0.3s ease;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 17px;
+    border-radius: 25px;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
-background-color: #f5a623;
-color: white;
-transform: translateY(-2px);
+    background-color: #D6B77A;
+    color: #142B45;
 }
 
 /* =========================
-SECCIONES
+   SECCIONES GENERALES
 ========================= */
 
 section {
-padding: 70px 20px;
-max-width: 1100px;
-margin: auto;
+    padding: 75px 20px;
+    max-width: 1150px;
+    margin: auto;
+    text-align: center;
 }
 
 section h2 {
-color: #0b3d91;
-font-size: 34px;
-margin-bottom: 15px;
+    color: #142B45;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 
 .subtitulo {
-color: #f5a623;
-font-weight: bold;
-font-size: 14px;
-letter-spacing: 2px;
-margin-bottom: 8px;
+    color: #A88750;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    margin-bottom: 10px;
 }
 
 .descripcion-seccion {
-max-width: 700px;
-margin: 0 auto 35px;
-font-size: 18px;
+    max-width: 720px;
+    margin: 0 auto 35px;
+    font-size: 17px;
+    color: #626262;
 }
 
 /* =========================
-INICIO / IMAGEN PRINCIPAL
+   INICIO / IMAGEN PRINCIPAL
 ========================= */
+
 .hero {
-width: 100%;
-max-width: none;
-min-height: 650px;
-margin: 0;
-padding: 60px 20px;
+    width: 100%;
+    max-width: none;
+    min-height: 620px;
+    margin: 0;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 
-display: flex;
-justify-content: center;
-align-items: center;
+    background-image:
+        linear-gradient(
+            rgba(15, 37, 58, 0.58),
+            rgba(15, 37, 58, 0.68)
+        ),
+        url("../viaje.jpg");
 
-text-align: center;
-color: white;
-
-background-image:
-    linear-gradient(
-        rgba(4, 30, 75, 0.45),
-        rgba(4, 30, 75, 0.60)
-    ),
-    url("viaje.jpg");
-
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-contenido {
-max-width: 850px;
-padding: 30px;
+    max-width: 850px;
+    padding: 30px;
 }
 
 .hero .etiqueta {
-color: #f5a623;
-font-size: 15px;
-font-weight: bold;
-letter-spacing: 3px;
-margin-bottom: 18px;
+    color: #E2C58D;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
 }
 
 .hero h2 {
-color: white;
-font-size: 56px;
-line-height: 1.15;
-margin-bottom: 22px;
-text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.45);
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 54px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+    text-shadow: 2px 3px 8px rgba(0,0,0,0.4);
 }
 
 .hero p {
-max-width: 700px;
-margin: 0 auto 30px;
-font-size: 20px;
-line-height: 1.7;
-}
-
-.hero button {
-padding: 15px 35px;
-font-size: 17px;
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-}
-
-.hero-contenido {
-max-width: 800px;
-}
-
-.etiqueta {
-color: #f5a623;
-font-weight: bold;
-letter-spacing: 2px;
-margin-bottom: 15px;
-}
-
-.hero h2 {
-color: white;
-font-size: 50px;
-margin-bottom: 20px;
-}
-
-.hero p {
-font-size: 20px;
-margin-bottom: 25px;
+    max-width: 720px;
+    margin: 0 auto 28px;
+    font-size: 19px;
+    color: white;
 }
 
 /* =========================
-BOTONES
+   BOTONES
 ========================= */
 
 button {
-background-color: #f5a623;
-color: white;
-border: none;
-padding: 13px 28px;
-border-radius: 25px;
-cursor: pointer;
-font-size: 16px;
-font-weight: bold;
-transition: 0.3s;
+    background-color: #D6B77A;
+    color: #142B45;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 
 button:hover {
-background-color: #d88900;
-transform: translateY(-2px);
+    background-color: #B99A63;
+    transform: translateY(-2px);
 }
 
 /* =========================
-SERVICIOS
+   SERVICIOS
 ========================= */
 
 #servicios {
-text-align: center;
+    text-align: center;
 }
 
 .tarjetas {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
-margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
 }
 
 .tarjeta {
-background-color: white;
-padding: 35px 25px;
-border-radius: 15px;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
-transition: 0.3s;
+    background-color: #FFFFFF;
+    padding: 35px 25px;
+    border-radius: 14px;
+    border: 1px solid #E9E3D8;
+    box-shadow: 0 5px 18px rgba(20,43,69,0.08);
+    transition: 0.3s ease;
 }
 
 .tarjeta:hover {
-transform: translateY(-5px);
+    transform: translateY(-5px);
+    box-shadow: 0 9px 22px rgba(20,43,69,0.13);
 }
 
 .icono {
-font-size: 50px;
-margin-bottom: 15px;
+    font-size: 45px;
+    margin-bottom: 15px;
 }
 
 .tarjeta h3 {
-color: #0b3d91;
-font-size: 23px;
-margin-bottom: 12px;
+    color: #142B45;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin-bottom: 12px;
 }
 
 .tarjeta p {
-margin-bottom: 20px;
+    color: #626262;
+    margin-bottom: 22px;
 }
 
 /* =========================
-DESTINOS
+   DESTINOS
 ========================= */
 
 #destinos {
-text-align: center;
-background-color: #eef5fb;
-max-width: none;
+    text-align: center;
+    background-color: #F0EDE5;
+    max-width: none;
 }
 
 .destinos-grid {
-max-width: 1100px;
-margin: 30px auto 0;
-
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
+    max-width: 1100px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .destino {
-background-color: white;
-padding: 30px 25px;
-border-radius: 15px;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
-transition: 0.3s;
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(20,43,69,0.08);
+    transition: 0.3s ease;
 }
 
 .destino:hover {
-transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .destino-icono {
-font-size: 55px;
-margin-bottom: 15px;
+    font-size: 48px;
+    margin-bottom: 15px;
 }
 
 .destino h3 {
-color: #0b3d91;
-font-size: 23px;
-margin-bottom: 12px;
+    color: #142B45;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin-bottom: 12px;
 }
 
 .destino p {
-margin-bottom: 20px;
+    color: #626262;
+    margin-bottom: 20px;
 }
 
 /* =========================
-SOBRE NOSOTROS
+   SOBRE NOSOTROS
 ========================= */
 
 #nosotros {
-text-align: center;
+    text-align: center;
 }
 
 .texto-nosotros {
-max-width: 750px;
-margin: 0 auto 40px;
-font-size: 18px;
+    max-width: 750px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    color: #626262;
 }
 
 .beneficios {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .beneficios div {
-background-color: white;
-padding: 30px 20px;
-border-radius: 15px;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 14px;
+    border: 1px solid #E9E3D8;
+    box-shadow: 0 5px 18px rgba(20,43,69,0.07);
 }
 
 .beneficios span {
-font-size: 40px;
+    font-size: 38px;
 }
 
 .beneficios h3 {
-color: #0b3d91;
-margin: 10px 0;
+    color: #142B45;
+    margin: 10px 0;
 }
 
 /* =========================
-CONTACTO
+   FORMULARIOS
 ========================= */
 
+#reserva,
 #contacto {
-text-align: center;
+    text-align: center;
 }
 
+#formulario-reserva,
 #contacto form {
-background-color: white;
-padding: 35px;
-border-radius: 15px;
-max-width: 650px;
-margin: 30px auto 0;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    background-color: #FFFFFF;
+    padding: 35px;
+    border-radius: 16px;
+    max-width: 650px;
+    margin: 30px auto 0;
+    border: 1px solid #E9E3D8;
+    box-shadow: 0 6px 22px rgba(20,43,69,0.09);
 }
 
+#formulario-reserva label,
 #contacto label {
-display: block;
-text-align: left;
-margin-top: 15px;
-margin-bottom: 5px;
-font-weight: bold;
-color: #0b3d91;
+    display: block;
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #142B45;
 }
 
 input,
-textarea {
-width: 100%;
-padding: 13px;
-border: 1px solid #ccc;
-border-radius: 8px;
-font-family: Arial, sans-serif;
-font-size: 15px;
+textarea,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #D8D5CE;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: #FFFFFF;
+    color: #333333;
 }
 
 input:focus,
-textarea:focus {
-outline: none;
-border-color: #0b3d91;
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #B99A63;
+    box-shadow: 0 0 0 2px rgba(185,154,99,0.15);
 }
 
 textarea {
-height: 130px;
-resize: vertical;
+    height: 130px;
+    resize: vertical;
 }
 
+#formulario-reserva button,
 #contacto button {
-margin-top: 20px;
+    margin-top: 24px;
 }
 
 /* =========================
-PIE DE PÁGINA
+   WHATSAPP
 ========================= */
 
-footer {
-background-color: #0b3d91;
-color: white;
-text-align: center;
-padding: 30px 20px;
-}
-
-footer h3 {
-color: #f5a623;
-font-size: 24px;
-margin-bottom: 5px;
-}
-
-/* =========================
-CELULARES
-========================= */
-
-@media (max-width: 768px) {
-
-header h1 {
-    font-size: 34px;
-}
-
-header img {
-    width: 150px;
-}
-
-nav {
-    gap: 15px;
-}
-
-nav a {
-    font-size: 15px;
-}
-
-.hero {
-    min-height: 500px;
-}
-
-.hero h2 {
-    font-size: 36px;
-}
-
-.hero p {
-    font-size: 17px;
-}
-
-.tarjetas,
-.destinos-grid,
-.beneficios {
-    grid-template-columns: 1fr;
-}
-
-section {
-    padding: 50px 20px;
-}
-    .boton-whatsapp {
+.boton-whatsapp {
     display: inline-block;
     background-color: #25D366;
     color: white;
-    padding: 14px 24px;
+    padding: 14px 25px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    margin-top: 22px;
+    transition: 0.3s ease;
 }
 
 .boton-whatsapp:hover {
     background-color: #128C7E;
+    transform: translateY(-2px);
 }
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    background-color: #142B45;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
 }
+
+footer h3 {
+    color: #D6B77A;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   CELULARES Y TABLETAS
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 12px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    header img {
+        width: 155px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav {
+        gap: 5px;
+        border-radius: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 9px 11px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 45px 15px;
+    }
+
+    .hero-contenido {
+        padding: 15px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 50px 18px;
+    }
+
+    section h2 {
+        font-size: 29px;
+    }
+
+    .tarjetas,
+    .destinos-grid,
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    #formulario-reserva,
+    #contacto form {
+        padding: 23px 18px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px 9px;
+    }
+
+    .hero h2 {
+        font-size: 31px;
+    }
+}
+
