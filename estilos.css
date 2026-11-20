@@ -146,7 +146,7 @@ section h2 {
             rgba(15, 37, 58, 0.58),
             rgba(15, 37, 58, 0.68)
         ),
-        url("../viaje.jpg");
+        url("viaje.jpg");
 
     background-size: cover;
     background-position: center;
